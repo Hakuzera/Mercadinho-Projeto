@@ -1,107 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimercado Gentilini</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minimercado Gentilini</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/styles.css" rel="stylesheet">
 </head>
 <body>
-    
-    <a id="topo"></a>
-    
-    <header>
-        <h1>Minimercado Gentilini</h1>
-        <p>Aqui o preço sempre está ótimo!</p>
-        <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Menu principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Minimercado Gentilini</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html#produtos">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro & Agendamento</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-        <section id="produtos">
-            <h2>Nossos Produtos</h2>
+  <!-- Header -->
+  <header class="py-5 bg-gradient text-white hero">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold" id="saudacao">Bem-vindo(a)!</h1>
+      <p class="lead mb-0">Aqui o preço sempre está ótimo!</p>
+    </div>
+  </header>
 
-            <h3>Frutas e Verduras</h3>
-            <div>
-                <img src="img/maca.png" alt="Foto de Maçãs" width="150">
-                <p><strong>Maçã Argentina</strong></p>
-                <p>Maçã vermelha, suculenta e crocante.</p>
-                <p>Valor: R$ 5,99/kg</p>
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Carrossel -->
+    <section class="container my-5">
+      <div id="carrosselDestaque" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4 shadow">
+          <div class="carousel-item active">
+            <img src="img/maca.png" class="d-block w-100" alt="Maçãs vermelhas frescas">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+              <h5>Frutas fresquinhas</h5>
+              <p>Qualidade selecionada todos os dias.</p>
             </div>
-            <div>
-                <img src="img/alface.jpg" alt="Foto de Alface" width="150">
-                <p><strong>Alface Crespa</strong></p>
-                <p>Folhas frescas e verdes, ideal para saladas.</p>
-                <p>Valor: R$ 3,50/unidade</p>
+          </div>
+          <div class="carousel-item">
+            <img src="img/macarao.jpg" class="d-block w-100" alt="Pacote de macarrão espaguete">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+              <h5>Não perecíveis</h5>
+              <p>Estoque completo para sua despensa.</p>
             </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/detergente.jpg" class="d-block w-100" alt="Frascos de detergente">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+              <h5>Higiene e limpeza</h5>
+              <p>Produtos que cuidam da sua casa.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDestaque" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrosselDestaque" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
 
-            <h3>Produtos Alimentícios Não Perecíveis</h3>
-            <div>
-               <img src="img/arroz.jpg" alt="Foto de Arroz" width="150">
-                <p><strong>Arroz Agulhinha</strong></p>
-                <p>Pacote de 5kg. Grãos selecionados, tipo 1.</p>
-                <p>Valor: R$ 25,00</p>
+    <!-- Cards categorias -->
+    <section class="container my-4" id="produtos">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/maca.png" class="card-img-top" alt="Maçã Argentina vermelha">
+            <div class="card-body">
+              <h5 class="card-title">Frutas e Verduras</h5>
+              <p class="card-text">Seleção diária de frutas e verduras frescas.</p>
+              <a href="produtos.html#frutas" class="btn btn-primary">Ver itens</a>
             </div>
-            <div>
-                <img src="img/macarao.jpg" alt="Foto de Macarrão" width="150">
-                <p><strong>Macarrão Espaguete</strong></p>
-                <p>Pacote de 500g. Macarrão de sêmola de alta qualidade.</p>
-                <p>Valor: R$ 4,99</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/arroz.jpg" class="card-img-top" alt="Pacote de arroz 5kg">
+            <div class="card-body">
+              <h5 class="card-title">Não Perecíveis</h5>
+              <p class="card-text">Arroz, massas e muito mais.</p>
+              <a href="produtos.html#nao-pereciveis" class="btn btn-primary">Ver itens</a>
             </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/detergente.jpg" class="card-img-top" alt="Frasco de detergente">
+            <div class="card-body">
+              <h5 class="card-title">Higiene e Limpeza</h5>
+              <p class="card-text">Tudo para manter sua casa sempre limpa.</p>
+              <a href="produtos.html#higiene" class="btn btn-primary">Ver itens</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <h3>Produtos de Higiene e Limpeza</h3>
-            <div>
-                <img src="img/sabonete.jpg" alt="Foto de Sabonete" width="150">
-                <p><strong>Sabonete Líquido</strong></p>
-                <p>Frasco de 200ml. Com aroma de lavanda.</p>
-                <p>Valor: R$ 8,50</p>
-            </div>
-            <div>
-                <img src="img/detergente.jpg" alt="Foto de Detergente" width="150">
-                <p><strong>Detergente Limão</strong></p>
-                <p>Frasco de 500ml. Poder desengordurante.</p>
-                <p>Valor: R$ 2,99</p>
-            </div>
+    <!-- Call to action -->
+    <section class="container my-5">
+      <div class="p-4 p-md-5 rounded-4 bg-primary-subtle border">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between">
+          <div class="me-md-4">
+            <h2 class="h4">Faça seu cadastro e agende sua entrega/retirada</h2>
+            <p class="mb-0">Ganhe agilidade na compra e escolha o melhor horário.</p>
+          </div>
+          <a href="cadastro.html" class="btn btn-primary btn-lg mt-3 mt-md-0">Cadastrar e Agendar</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        </section>
-
-        <section id="servicos">
-            <h2>Serviços</h2>
-            <div>
-                <h3>Retirada no Local</h3>
-                <p>Compre online e retire seu pedido em nossa loja.</p>
-                <p>Valor: Gratuito</p>
-            </div>
-            <div>
-                <h3>Tele-entrega</h3>
-                <p>Receba seus produtos no conforto da sua casa. Consulte a área de cobertura.</p>
-                <p>Valor: R$ 10,00 (Taxa fixa)</p>
-            </div>
-        </section>
-    </main>
-
-    <hr>
-
-    <footer id="contato">
-        <p>&copy; 2025 Minimercado Gentilini. Todos os direitos reservados.</p>
-        <p>Contato: 
-            <a href="mailto:minimercado.gentilini@gmail.com">minimercado.gentilini@gmail.com</a> | 
+  <!-- Rodapé -->
+  <footer class="bg-light mt-5 pt-4 border-top" id="contato">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 small">
+          <p class="mb-1">&copy; 2025 Minimercado Gentilini. Todos os direitos reservados.</p>
+          <p class="mb-1">Contato:
+            <a href="mailto:minimercado.gentilini@gmail.com">minimercado.gentilini@gmail.com</a> |
             <a href="tel:+5551999999999">(51) 99999-9999</a>
-        </p>
-        <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#topo">Voltar ao topo</a></li>
-            </ul>
-        </nav>
-    </footer>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-inline text-md-end">
+            <li class="list-inline-item"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a href="produtos.html">Catálogo</a></li>
+            <li class="list-inline-item"><a href="servicos.html">Serviços</a></li>
+            <li class="list-inline-item"><a href="cadastro.html">Cadastro</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>
+
 
