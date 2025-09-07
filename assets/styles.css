@@ -21,7 +21,9 @@ footer a:hover {
   text-decoration: underline;
 }
 
-#carrosselDestaque img {
-  height: 400px;
+#carrosselDestaque .carousel-item img {
+  height: 400px !important;
   object-fit: cover;
+}
+
 
