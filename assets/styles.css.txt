@@ -1,4 +1,3 @@
-
 .hero {
   background: linear-gradient(135deg, #0d6efd, #198754);
   color: #fff;
@@ -23,6 +22,6 @@ footer a:hover {
 }
 
 #carrosselDestaque img {
-  height: 200px; 
+  height: 400px;
   object-fit: cover;
 
