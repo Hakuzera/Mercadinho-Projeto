@@ -22,8 +22,9 @@ footer a:hover {
 }
 
 #carrosselDestaque .carousel-item img {
-  height: 400px !important;
+  height: 250px !important;
   object-fit: cover;
 }
+
 
 
